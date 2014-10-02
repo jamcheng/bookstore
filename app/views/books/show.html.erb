@@ -9,7 +9,11 @@
 </article>
 
 <%= link_to 'All Books', books_path %>
-| <%= link_to 'Edit', edit_book_path(@book) %>
+<%= link_to 'Edit', edit_book_path(@book) %>
 <%= button_to 'Delete', @book,
 	method: :delete,
 	data: { confirm: 'Are you sure?'} %>
+<p>
+	Read all
+	<%= link_to pluralize(@book.reviews.size, 'review'), book_reviews_path(@book) %>
+</p>

@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 20141002221657) do
     t.string   "name"
     t.integer  "stars"
     t.text     "comment"
-    t.integer  "books_id"
+    t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "reviews", ["books_id"], name: "index_reviews_on_books_id"
+  add_index "reviews", ["book_id"], name: "index_reviews_on_book_id"
 
 end
